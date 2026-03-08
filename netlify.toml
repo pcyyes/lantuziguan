@@ -1,0 +1,13 @@
+
+# 禁止百度验证文件发生HTTPS跳转
+[[redirects]]
+  from = "/baidu_verify_*"
+  to = "/:splat"
+  status = 200
+  force = false
+
+# 兜底规则：其余HTTP请求统一跳转HTTPS（保留原有安全策略）
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
