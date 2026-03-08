@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/baidu_verify_*"
+  to = "/:splat"
+  status = 200
+  force = false
