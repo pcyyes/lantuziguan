@@ -82,23 +82,8 @@ teamMembers.forEach(member => {
 const contactForm = document.querySelector('.contact-form form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // 获取表单数据
-        const name = this.querySelector('input[type="text"]').value;
-        const phone = this.querySelector('input[type="tel"]').value;
-        const email = this.querySelector('input[type="email"]').value;
-        const message = this.querySelector('textarea').value;
-        
-        // 简单验证
-        if (!name || !phone || !email || !message) {
-            alert('请填写所有必填字段');
-            return;
-        }
-        
-        // 模拟表单提交
-        alert('表单提交成功！我们将尽快与您联系。');
-        this.reset();
+        // 由于我们使用了 EmailJS 或 Formspree 进行实际提交
+        // 这里不需要阻止默认行为，让表单正常提交
     });
 }
 
